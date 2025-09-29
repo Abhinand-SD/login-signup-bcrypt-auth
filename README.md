@@ -1,16 +1,79 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Login & Signup with LocalStorage (Encrypted Passwords)
 
-Currently, two official plugins are available:
+A simple **React.js** project demonstrating login and signup functionality using **localStorage**.
+Passwords are hashed with `bcryptjs` before being stored, ensuring they are not saved as plain text.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* User **Signup** with password encryption (`bcryptjs`).
+* User **Login** with password verification.
+* Credentials stored in **localStorage**.
+* Basic form validation.
+* Fully frontend only (no backend required).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* **React.js**
+* **bcryptjs** for password hashing
+* **LocalStorage** for user data persistence
+
+---
+
+## 📦 Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Abhinand-SD/login-signup-bcrypt-auth.git
+   cd login-signup-bcrypt-auth
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the project:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📌 How It Works
+
+1. On **Signup**:
+
+   * The entered password is hashed with `bcryptjs`.
+   * User data (email + hashed password) is stored in `localStorage`.
+
+2. On **Login**:
+
+   * The entered password is checked against the hashed password using `bcrypt.compareSync`.
+   * If it matches, login is successful.
+
+---
+
+## 🔒 Notes
+
+* This is a **frontend-only demo**.
+* Not suitable for production apps (use a proper backend with sessions/JWTs for real authentication).
+* LocalStorage can be accessed by anyone with access to the device/browser.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+You’re free to use, modify, and distribute it.
+
+---
+
+👨‍💻 Developed by **Abhinand SD**
