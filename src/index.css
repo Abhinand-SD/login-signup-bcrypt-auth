@@ -77,6 +77,15 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-p{
+span{
   cursor: pointer;
+  text-decoration: underline;
+}
+
+.msg{
+  position: absolute;
+  right: 2%;
+  top: 0;
+  padding: 5px 10px 5px 10px;
+  border-radius: 7px;
 }
